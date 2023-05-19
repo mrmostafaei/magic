@@ -1,0 +1,59 @@
+{
+    "name": "mrmostafaei/magic",
+    "description": "Laravel helper package for iranians",
+    "keywords": [
+        "laravel",
+        "miladtech",
+        "helpers"
+    ],
+    "homepage": "https://github.com/mrmostafaei/magic",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Milad Tech",
+            "email": "info@milad-tech.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.1",
+        "hekmatinasser/verta": "^8.0",
+        "illuminate/support": "^8.0|^9.0",
+        "cviebrock/eloquent-sluggable": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.1 | ^6",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MiladTech\\": "src"
+        },
+        "classmap": [
+            "database/seeds"
+        ],
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MiladTech\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "\"vendor/bin/phpunit\"",
+        "test-coverage": "\"vendor/bin/phpunit\" --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MiladTech\\MagicServiceProvider"
+            ]
+        }
+    }
+}
